@@ -14,8 +14,8 @@
 
     <!--SET SERVER URL HERE-->
 
-    <string name="link" translatable="false"> http://192.168.1.113/PHPScript/clinicadmintemp/Apicontrollers/</string>
-    <string name="link1" translatable="false"> http://192.168.1.113/PHPScript/clinicadmintemp/</string>
+    <string name="link" translatable="false"> https://at-home-acquisition.000webhostapp.com/clinicadmintemp/Apicontrollers/</string>
+    <string name="link1" translatable="false"> https://at-home-acquisition.000webhostapp.com/</string>
 
     <!--SET SPLASH SLIDER TEXT HERE-->
 
