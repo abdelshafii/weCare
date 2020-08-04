@@ -18,11 +18,11 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/img_cancel"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="1dp"
             android:background="@drawable/layoutdialogerror"
-            android:id="@+id/img_cancel"
             android:padding="8dp"
             android:src="@drawable/dialogerror"
             tools:ignore="ContentDescription" />

@@ -2,9 +2,7 @@
     <string name="app_name">We Care</string>
 
 
-    <!--Admob Ad Integration-->
 
-      <!--To display ads set displayads to "yes"-->
     <string name="diaplayads" translatable="false">yes</string>
 
     <string name="adMobId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
@@ -12,12 +10,10 @@
     <string name="adMobInterstial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
 
 
-    <!--SET SERVER URL HERE-->
 
-    <string name="link" translatable="false"> https://at-home-acquisition.000webhostapp.com/clinicadmintemp/Apicontrollers/</string>
-    <string name="link1" translatable="false"> https://at-home-acquisition.000webhostapp.com/</string>
+    <string name="link" translatable="false">https://at-home-acquisition.000webhostapp.com/clinicadmintemp/Apicontrollers/</string>
+    <string name="link1" translatable="false">https://at-home-acquisition.000webhostapp.com/clinicadmintemp/</string>
 
-    <!--SET SPLASH SLIDER TEXT HERE-->
 
     <string name="text1">Find nearest Doctor</string>
     <string name="tetx2">&amp; Book Appointment by this app</string>
@@ -31,13 +27,12 @@
     <string name="city" translatable="false">City</string>
     <string name="alphabetic" translatable="false">alphabetic</string>
 
-    <!-- HOME PAGE TEXT HERE-->
 
     <string name="doctor">DOCTORS</string>
     <string name="pharmany">PHARMACIES</string>
     <string name="hospital">HOSPITALS</string>
 
-    <!--DOCTOR LIST TEXT HERE -->
+
     <string name="doctor_symbol" translatable="false">D</string>
     <string name="pharmacy_symbol" translatable="false">P</string>
     <string name="hospital_symbol" translatable="false">H</string>
@@ -47,8 +42,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="facebook_app_id" translatable="false">336936243379790</string>
-    <string name="fb_login_protocol_scheme" tools:ignore="MissingTranslation">fb336936243379790</string>
+    <string name="facebook_app_id" translatable="false">317484016071638</string>
+    <string name="fb_login_protocol_scheme" tools:ignore="MissingTranslation">fb317484016071638</string>
     <string name="setting" tools:ignore="MissingTranslation">Settings</string>
     <string name="radius" tools:ignore="MissingTranslation">Radius</string>
     <string name="orderby" tools:ignore="MissingTranslation">Order By</string>
@@ -87,11 +82,9 @@
     <string name="options_clear" tools:ignore="MissingTranslation">Clear</string>
     <string name="options_exit" tools:ignore="MissingTranslation">Exit</string>
 
-    <!--book apointment-->
     <string name="apointment" tools:ignore="MissingTranslation">Appointment</string>
     <string name="errormsg" tools:ignore="MissingTranslation">Sorry! No Data Found! Please Try Later!</string>
 
-    <!--Settings for error dialog text content-->
     <string name="errormessage" tools:ignore="MissingTranslation">Sorry, We could not find any data, Please try again..</string>
     <string name="errorconfirm" tools:ignore="MissingTranslation">Close</string>
     <string name="button_yes" tools:ignore="MissingTranslation">Yes</string>
@@ -104,19 +97,19 @@
     <string name="logout_message" tools:ignore="MissingTranslation">Are you sure you want to logout ?</string>
     <string name="logout_title" tools:ignore="MissingTranslation">Logout</string>
 
-    <!--Doctor Deatail email Text -->
+
 
     <string name="doctor_mail_subject" tools:ignore="MissingTranslation">Doctor Inquiries</string>
     <string name="pharmacy_mail_subject" tools:ignore="MissingTranslation">Pharmacy Inquiries</string>
     <string name="hospital_mail_subject" tools:ignore="MissingTranslation">Hospital Inquiries</string>
 
-    <!--Notes for Sending Recepe-->
+
     <string name="recipenotes" tools:ignore="MissingTranslation">Notes:</string>
     <string name="recipenotes1" tools:ignore="MissingTranslation">1. Appointment time may change if already allotted.</string>
     <string name="recipenotes2" tools:ignore="MissingTranslation">2. This form is to request appointment, if your appointment confirmed you will get mail from doctor.</string>
     <string name="recipenotes3" tools:ignore="MissingTranslation">3. For Emergency direct visit is advisable.</string>
 
-    <!--Notes for Booking appointment-->
+
     <string name="booknotes" tools:ignore="MissingTranslation">Notes:</string>
     <string name="booknotes1" tools:ignore="MissingTranslation">1. Appointment time may change if already allotted.</string>
     <string name="booknotes2" tools:ignore="MissingTranslation">2. This form is to request appointment, if your appointment confirmed you will get mail from doctor.</string>
@@ -143,28 +136,28 @@
     <string name="ap8" tools:ignore="MissingTranslation">Please,verify if the required appointment is confirmed</string>
     <string name="ap9" tools:ignore="MissingTranslation">Thanks!</string>
 
-    <!-- SETTING PAGE STRINGS -->
+
 
     <string name="distance_onoff" tools:ignore="MissingTranslation">Search by Radius</string>
     <string name="distance_txt" tools:ignore="MissingTranslation">DISTANCE</string>
 
-    <!--Settings for default values in layouts-->
+
 
     <string name="todo" tools:ignore="MissingTranslation">TODO</string>
     <string name="about_us_txt" tools:ignore="MissingTranslation">About Us</string>
-    <string name="website_text" tools:ignore="MissingTranslation">WWW.FREAKTEMPLATE.COM</string>
-    <string name="email_txt" tools:ignore="MissingTranslation">INFO@FREAKTEMPLATE.COM</string>
-    <string name="name_company_txt" tools:ignore="MissingTranslation">FREAKTEMPLATE</string>
+    <string name="website_text" tools:ignore="MissingTranslation">WWW.WeCare.COM</string>
+    <string name="email_txt" tools:ignore="MissingTranslation">INFO@WeCare.COM</string>
+    <string name="name_company_txt" tools:ignore="MissingTranslation">We Care Company</string>
     <string name="contact_us_txt" tools:ignore="MissingTranslation">Contact Us</string>
     <string name="version_txt" tools:ignore="MissingTranslation">Version :</string>
     <string name="abtus_header" tools:ignore="MissingTranslation"><![CDATA[Doctor Finder + Hospitals & Pharmacy]]></string>
     <string name="version_number" tools:ignore="MissingTranslation">1.0</string>
-    <string name="user_name_txt" tools:ignore="MissingTranslation">Mark Smith</string>
+    <string name="user_name_txt" tools:ignore="MissingTranslation">Bunduga</string>
     <string name="description_hint_txt" tools:ignore="MissingTranslation">Description</string>
     <string name="mobile_number_txt" tools:ignore="MissingTranslation">Mobile Number</string>
     <string name="select_time_txt" tools:ignore="MissingTranslation">Select Time</string>
     <string name="select_date_txt" tools:ignore="MissingTranslation">Select Date</string>
-    <string name="user_email_txt" tools:ignore="MissingTranslation">Mark.smith@gmail.com</string>
+    <string name="user_email_txt" tools:ignore="MissingTranslation">Bundoga@gmail.com</string>
     <string name="txt_abtus" tools:ignore="MissingTranslation">Lorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliqua</string>
     <string name="txt_healthcare" tools:ignore="MissingTranslation">Lorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliqua</string>
     <string name="health_care_txt_header" tools:ignore="MissingTranslation">HEALTH CARE</string>
@@ -174,8 +167,8 @@
     <string name="services_txt" tools:ignore="MissingTranslation">Lorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliqua</string>
     <string name="services_txt_header" tools:ignore="MissingTranslation">SERVICES</string>
     <string name="hint_distance" tools:ignore="MissingTranslation">4 km</string>
-    <string name="profile_name_txt" tools:ignore="MissingTranslation">Jeff hardy</string>
-    <string name="profile_description_txt" tools:ignore="MissingTranslation">Jeff hardy</string>
+    <string name="profile_name_txt" tools:ignore="MissingTranslation">zanzoog</string>
+    <string name="profile_description_txt" tools:ignore="MissingTranslation">abdullah, abdelshafi</string>
     <string name="rating_txt" tools:ignore="MissingTranslation">RATING</string>
     <string name="rating_number" tools:ignore="MissingTranslation">4.0</string>
     <string name="image_type_txt" tools:ignore="MissingTranslation">D</string>
@@ -207,7 +200,7 @@
     <string name="gallery_txt" tools:ignore="MissingTranslation">GALLERY</string>
     <string name="order_medicine_txt" tools:ignore="MissingTranslation">Order Medicine</string>
     <string name="distance_setting_txt" tools:ignore="MissingTranslation">50 Km</string>
-    <string name="setting_city_name" tools:ignore="MissingTranslation">Surat</string>
+    <string name="setting_city_name" tools:ignore="MissingTranslation">misr</string>
     <string name="speciality_hint" tools:ignore="MissingTranslation">CARDIOLOGY</string>
     <string name="user_first_letter" tools:ignore="MissingTranslation">M</string>
     <string name="error_txt" tools:ignore="MissingTranslation">ERROR</string>
@@ -250,13 +243,12 @@
     <string name="txt_here" tools:ignore="MissingTranslation">here</string>
     <string name="whatsapperror" tools:ignore="MissingTranslation">Whatsapp have not been installed.</string>
     <string name="txt_address" tools:ignore="MissingTranslation">Address:</string>
-    <string name="fbtt1" tools:ignore="MissingTranslation">is specialist in service</string>
-    <string name="fbt2" tools:ignore="MissingTranslation">, you can contact him on</string>
-    <string name="fbt3" tools:ignore="MissingTranslation">, or visit him at</string>
+    <string name="fbtt1" tools:ignore="MissingTranslation"> is specialist in service : </string>
+    <string name="fbt2" tools:ignore="MissingTranslation">, you can contact him on : </string>
+    <string name="fbt3" tools:ignore="MissingTranslation">, or visit him at : </string>
     <string name="default_notification_channel_id" tools:ignore="MissingTranslation">fcm_default_channel</string>
     <string name="enteremailid" tools:ignore="MissingTranslation">Please Enter EmailId</string>
-
-
+    <string name="splash" translatable="false">♥ We Care You ♥</string>
 
 
 </resources>

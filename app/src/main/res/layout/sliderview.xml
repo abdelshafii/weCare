@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AC2B3B"
+    android:background="#9bbdf9"
     android:id="@+id/main_rel"
     tools:context="com.example.weCare.Introduction">
 

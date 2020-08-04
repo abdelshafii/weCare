@@ -67,7 +67,7 @@ public class NotificationService extends Service {
 		Random r = new Random();
 		int i1 = r.nextInt(100 - 1) + 1;
 
-		int icon = R.mipmap.ic_launcher;
+		int icon = R.mipmap.logoo_foreground;
 		long when = System.currentTimeMillis();
 		
 		Log.d("when", ""+when);

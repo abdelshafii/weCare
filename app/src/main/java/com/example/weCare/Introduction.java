@@ -98,7 +98,7 @@ public class Introduction extends AppCompatActivity {
                     title3.setText(R.string.pharmacytittle3);
 
                     sliderimage.setImageResource(R.drawable.pharmacyicon);
-                    mainlayout.setBackgroundColor(getResources().getColor(R.color.pharmacycolor));
+                    mainlayout.setBackgroundColor(getResources().getColor(R.color.docotorcolor));
                     p1.setImageResource(R.drawable.pager12);
                     p2.setImageResource(R.drawable.pager1);
                     p3.setImageResource(R.drawable.pager12);
@@ -111,7 +111,7 @@ public class Introduction extends AppCompatActivity {
                     title3.setText(R.string.hospitaltittle3);
 
                     sliderimage.setImageResource(R.drawable.hospitalicon);
-                    mainlayout.setBackgroundColor(getResources().getColor(R.color.hospitalcolor));
+                    mainlayout.setBackgroundColor(getResources().getColor(R.color.docotorcolor));
                     p1.setImageResource(R.drawable.pager12);
                     p2.setImageResource(R.drawable.pager12);
                     p3.setImageResource(R.drawable.pager1);

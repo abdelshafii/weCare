@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">DoctorFinder</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">We Care</string>
     <string name="text1">العثور على أقرب طبيب</string>
     <string name="tetx2">وكتاب تعيين من قبل هذا التطبيق</string>
     <string name="doctor">الأطباء</string>
@@ -10,6 +10,193 @@
     <string name="txt_pharmacies">بحث الأدوية المستوصفات هنا . يمكنك العثور على المدينة أو بالقرب منك أو فقط باستخدام الاسم.</string>
     <string name="txt_hospitals">بحث المستشفيات حسب المدينة أو بالقرب منك أو فقط باستخدام اسم المستشفى.يمكنك العثور على أفضل المستشفيات بنقرة واحدة فقط بعيدا.</string>
     <string name="home_header_txt">الصفحة الرئيسية</string>
-    <string name="loading" translatable="false">loading..</string>
-    <string name="distance">DISTANCE</string>
+    <string name="pharmacytittle1">البحث عن صيدلية قريبة</string>
+    <string name="pharmacytittle2">يمكنك البحث عن الصيدليات بالقرب منك ، باستخدام وظيفة الفرز حسب المدينة أو الخريطة من السهل جدًا العثور على متاجر الصيدليات</string>
+    <string name="pharmacytittle3">يمكنك تحميل وصفة طبية والحصول على الدواء في المنزل</string>
+    <string name="hospitaltittle1">ابحث عن المستشفيات القريبة</string>
+    <string name="hospitaltittle2">يمكنك البحث في المستشفيات القريبة منك ، باستخدام وظيفة الفرز حسب المدينة أو الخريطة من السهل جدًا العثور على المستشفيات</string>
+    <string name="hospitaltittle3">يمكنك التحقق من التسهيلات المتوفرة في المستشفى والاتصال بها.</string>
+    <string name="slidetitle1" >ايجاد أفضل الأطباء</string>
+    <string name="slidetitle2" >الآن العثور على أفضل الأطباء أمر سهل للغاية ، يمكنك البحث عن طبيب قريب أو الفرز حسب التصنيف أو الخدمة أو التخصص.</string>
+    <string name="slidetitle3" >يمكنك أيضًا حجز موعد أو الاتصال بالأطباء مباشرة.</string>
+    <string name="loading" translatable="false">تحميل..</string>
+    <string name="recipenotes" tools:ignore="MissingTranslation">ملاحظات:</string>
+    <string name="recipenotes1" tools:ignore="MissingTranslation">1. قد يتغير وقت الموعد إذا تم تخصيصه بالفعل.</string>
+    <string name="recipenotes2" tools:ignore="MissingTranslation">2. هذا النموذج هو طلب موعد ، إذا أكد موعدك ، ستتلقى بريدًا من الطبيب.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="aboutparagraph1" tools:ignore="MissingTranslation">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</string>
+    <string name="aboutparagraph2" tools:ignore="MissingTranslation">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</string>
+    <string name="aboutparagraph3" tools:ignore="MissingTranslation">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "</string>
+    <string name="aboutparagraph4" tools:ignore="MissingTranslation">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
+    <string name="aboutparagraph5" tools:ignore="MissingTranslation">Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+
+    <string name="profile" tools:ignore="MissingTranslation">الملف الشخصي</string>
+    <string name="book_appointment" tools:ignore="MissingTranslation">حجز موعد</string>
+
+
+    <string name="drawer_open" tools:ignore="MissingTranslation">فتح</string>
+    <string name="drawer_close" tools:ignore="MissingTranslation">غلق</string>
+
+    <string name="options_register" tools:ignore="MissingTranslation">تسجيل</string>
+    <string name="options_unregister" tools:ignore="MissingTranslation">غير مسجل</string>
+    <string name="options_clear" tools:ignore="MissingTranslation">مسح</string>
+    <string name="options_exit" tools:ignore="MissingTranslation">خروج</string>
+
+    <string name="apointment" tools:ignore="MissingTranslation">الحجز</string>
+    <string name="errormsg" tools:ignore="MissingTranslation">لا يوجد بيانات! من فضلك حاول مجددا!</string>
+
+    <string name="errormessage" tools:ignore="MissingTranslation">لا يوجد بيانات! من فضلك حاول مجددا..</string>
+    <string name="errorconfirm" tools:ignore="MissingTranslation">غلق</string>
+    <string name="button_yes" tools:ignore="MissingTranslation">نعم</string>
+    <string name="button_no" tools:ignore="MissingTranslation">لا</string>
+    <string name="bookalert" tools:ignore="MissingTranslation">للحجز مطلوب تسجيل الدخول ، هل ترغب في تسجيل الدخول الآن؟</string>
+    <string name="orderalert" tools:ignore="MissingTranslation">لطلب الدواء تحتاج إلى تسجيل الدخول أولاً ، هل ترغب في تسجيل الدخول الآن؟</string>
+    <string name="internet_message" tools:ignore="MissingTranslation">لا يوجد اتصال بالانترنت</string>
+    <string name="login_message" tools:ignore="MissingTranslation">تم تسجيل الدخول بنجاح</string>
+    <string name="success_title" tools:ignore="MissingTranslation">نجح</string>
+    <string name="logout_message" tools:ignore="MissingTranslation">هل انت متاكد من تسجيل الخروج؟</string>
+    <string name="logout_title" tools:ignore="MissingTranslation">تسجيل الخروج</string>
+
+
+
+    <string name="doctor_mail_subject" tools:ignore="MissingTranslation">Doctor Inquiries</string>
+    <string name="pharmacy_mail_subject" tools:ignore="MissingTranslation">Pharmacy Inquiries</string>
+    <string name="hospital_mail_subject" tools:ignore="MissingTranslation">Hospital Inquiries</string>
+
+    <string name="recipenotes3" tools:ignore="MissingTranslation">3. من المستحسن زيارة الطوارئ المباشرة.</string>
+    <string name="booknotes" >ملاحظات:</string>
+    <string name="booknotes1" >1. قد يتغير وقت الموعد إذا تم تخصيصه بالفعل.</string>
+    <string name="booknotes2" >2. هذا النموذج هو طلب موعد ، إذا أكد موعدك ، ستتلقى بريدًا من الطبيب.</string>
+    <string name="booknotes3" >3. من المستحسن زيارة الطوارئ المباشرة.</string>
+    <string name="orderingmedicine" tools:ignore="MissingTranslation">مرحبًا ، أنا اقوم بطلب دواء ، الوصفة الطبية مرفقة بالأسفل.</string>
+    <string name="reviewerror" tools:ignore="MissingTranslation">للمراجعة ، تحتاج إلى تسجيل الدخول أولاً ، هل ترغب في تسجيل الدخول الآن؟</string>
+    <string name="sharemessage" tools:ignore="MissingTranslation">الآن العثور على أفضل الأطباء أمر سهل للغاية ، يمكنك البحث عن طبيب أو صيدلية أو مستشفيات بسهولة شديدة ، تحقق من هذا التطبيق للبحث عن الأطباء أو الصيدلة أو المستشفيات.</string>
+    <string name="distance">المسافة</string>
+    <string name="aph1" tools:ignore="MissingTranslation">أود حجز موعد والتفاصيل التاليه هي تفاصيل طلبي ،</string>
+    <string name="aph2" tools:ignore="MissingTranslation">اسم المريض : </string>
+    <string name="aph3" tools:ignore="MissingTranslation">البريد الالكتروني : </string>
+    <string name="aph4" tools:ignore="MissingTranslation">رقم الهاتف : </string>
+    <string name="aph5" tools:ignore="MissingTranslation">التاريخ المطلوب : </string>
+    <string name="aph6" tools:ignore="MissingTranslation">الوقت المطلوب : </string>
+    <string name="ap7" tools:ignore="MissingTranslation">وصف الحالة : </string>
+    <string name="ap8" tools:ignore="MissingTranslation">من فضلك ، تحقق مما إذا تم تأكيد الموعد المطلوب</string>
+    <string name="ap9" tools:ignore="MissingTranslation">شكرا♥!</string>
+    <string name="version_txt" tools:ignore="MissingTranslation">اصدار :</string>
+    <string name="abtus_header" tools:ignore="MissingTranslation"><![CDATA[ايجاد الاطباء + المستشفيات & الصيدليات]]></string>
+    <string name="version_number" tools:ignore="MissingTranslation">1.0</string>
+    <string name="user_name_txt" tools:ignore="MissingTranslation">بندجه</string>
+    <string name="description_hint_txt" tools:ignore="MissingTranslation">الوصف</string>
+    <string name="mobile_number_txt" tools:ignore="MissingTranslation">رقم الهاتف</string>
+    <string name="select_time_txt" tools:ignore="MissingTranslation">اختار وقت</string>
+    <string name="txt_abtus" tools:ignore="MissingTranslation">Lorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliqua</string>
+    <string name="txt_healthcare" tools:ignore="MissingTranslation">Lorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliquaLorem ipsum, dolor sit amet, consectetur, adipiscing elit, sed do eiusmod, tempor incididunt, ut labore et dolore, magna aliqua</string>
+    <string name="health_care_txt_header" tools:ignore="MissingTranslation">الرعاية الصحية</string>
+    <string name="timing_txt" tools:ignore="MissingTranslation">التوقيت</string>
+    <string name="services_txt_header" tools:ignore="MissingTranslation">الخدمات</string>
+    <string name="rating_txt" tools:ignore="MissingTranslation">تقييم</string>
+    <string name="speciality_header" tools:ignore="MissingTranslation">التخصصات</string>
+    <string name="favorites_txt" tools:ignore="MissingTranslation">المفضل لديك</string>
+    <string name="doctor_fav_txt" tools:ignore="MissingTranslation">الأطباء</string>
+    <string name="pharmacies_fav_txt" tools:ignore="MissingTranslation">الصيدليات</string>
+    <string name="hospital_fav_txt" tools:ignore="MissingTranslation">المستشفيات</string>
+    <string name="profile_txt" tools:ignore="MissingTranslation">Profile</string>
+    <string name="sign_in_txt" tools:ignore="MissingTranslation">تسجيل الدخول</string>
+    <string name="home_txt" translatable="false">الصفحة الرئيسية</string>
+    <string name="social_sharing_txt" tools:ignore="MissingTranslation">مشاركة البرنامج</string>
+    <string name="settings_txt" tools:ignore="MissingTranslation">الاعدادات</string>
+    <string name="login_txt" tools:ignore="MissingTranslation">تسجيل الدخول</string>
+    <string name="password_txt" tools:ignore="MissingTranslation">الرقم السري</string>
+    <string name="username_txt" tools:ignore="MissingTranslation">اسم المستخدم</string>
+    <string name="create_new_one_txt" tools:ignore="MissingTranslation">انشاء واحد جديد</string>
+    <string name="dont_have_account_txt" tools:ignore="MissingTranslation">ليس لديك حساب؟</string>
+    <string name="sign_in_with_facebook" tools:ignore="MissingTranslation">تسجيل الدخول بالفيسبوك</string>
+    <string name="register_txt" tools:ignore="MissingTranslation">تسجيل</string>
+    <string name="take_picture_txt" tools:ignore="MissingTranslation">اخذ صورة</string>
+    <string name="select_picture" tools:ignore="MissingTranslation">اختيار صورة</string>
+    <string name="setting_city_name" tools:ignore="MissingTranslation">egypt</string>
+    <string name="mail_address_txt" tools:ignore="MissingTranslation">البريد الالكتروني</string>
+    <string name="review_txt" tools:ignore="MissingTranslation">رايك في الطبيب</string>
+    <string name="order_medicine_header" tools:ignore="MissingTranslation">طلب الدواء</string>
+    <string name="upload_prescription_txt" tools:ignore="MissingTranslation">تحميل وصفة طبية</string>
+    <string name="upload_detail_text" tools:ignore="MissingTranslation">التقط صورة لوصفة طبية باستخدام الكاميرا أو اختر وصفة من المعرض</string>
+    <string name="camera_txt" tools:ignore="MissingTranslation">الكاميرا</string>
+    <string name="gallery_txt" tools:ignore="MissingTranslation">المعرض</string>
+    <string name="order_medicine_txt" tools:ignore="MissingTranslation">طلب دواء</string>
+    <string name="speciality_hint" tools:ignore="MissingTranslation">أمراض القلب</string>
+    <string name="user_first_letter" tools:ignore="MissingTranslation">M</string>
+    <string name="error_txt" tools:ignore="MissingTranslation">خطأ</string>
+    <string name="your_experience_txt" tools:ignore="MissingTranslation">خبرتك</string>
+    <string name="selectprescription_txt" tools:ignore="MissingTranslation">يرجى تحديد صورة الوصفة الطبية!</string>
+    <string name="mobile_num_text" tools:ignore="MissingTranslation">أدخل رقم الهاتف </string>
+    <string name="error_desc_text" tools:ignore="MissingTranslation">أدخل الوصف</string>
+    <string name="sendrecipe_txt" tools:ignore="MissingTranslation">أرسل وصفتك</string>
+    <string name="selectionsuccess_text" tools:ignore="MissingTranslation">تم تحديد الصورة بنجاح!</string>
+    <string name="email1" tools:ignore="MissingTranslation">الاسم</string>
+    <string name="email2" tools:ignore="MissingTranslation">رقم البريد:</string>
+    <string name="email3" tools:ignore="MissingTranslation">رقم الاتصال:</string>
+    <string name="select_sucess_txt" tools:ignore="MissingTranslation">تم تحديد الصورة بنجاح!</string>
+    <string name="later_txt" tools:ignore="MissingTranslation">يرجى المحاولة لاحقًا!</string>
+    <string name="noemailclient" tools:ignore="MissingTranslation">لا يوجد بريد إلكتروني موجود لهذا من قبل</string>
+    <string name="inqu_txt" tools:ignore="MissingTranslation">للاستفسارات</string>
+    <string name="feedback_txt" tools:ignore="MissingTranslation">شكرا لك على ملاحظاتك</string>
+    <string name="request_review" tools:ignore="MissingTranslation">من فضلك اعطي رايك</string>
+    <string name="thanks_txt" tools:ignore="MissingTranslation">شكرا</string>
+    <string name="selectimagetxt" tools:ignore="MissingTranslation">قم باختيار صورة</string>
+    <string name="pass_enter_text" tools:ignore="MissingTranslation">ادخل الرقم السري</string>
+    <string name="username_enter" tools:ignore="MissingTranslation">ادخل الاسم</string>
+    <string name="load_text" tools:ignore="MissingTranslation">تحميل..</string>
+    <string name="toast_warn" tools:ignore="MissingTranslation">اسم المستخدم او الرقم السري غير صحيحين</string>
+    <string name="alertmsg" tools:ignore="MissingTranslation">الموقع</string>
+    <string name="alert_msg2" tools:ignore="MissingTranslation">تحتاج إلى إذن للحصول على موقعك</string>
+    <string name="shareapp_txt" tools:ignore="MissingTranslation">مشاركة البرنامج</string>
+    <string name="gotit_txt" tools:ignore="MissingTranslation">لقد فهمت!</string>
+    <string name="requestinternet" tools:ignore="MissingTranslation">من فضلك تأكد من توصيل الانترنت!</string>
+    <string name="skip_txt" tools:ignore="MissingTranslation">تخطي</string>
+    <string name="txt_continue" tools:ignore="MissingTranslation">تابع</string>
+    <string name="pager1" tools:ignore="MissingTranslation">قريب من (الموقع) </string>
+    <string name="pager3" tools:ignore="MissingTranslation">ترتيب ابجدي </string>
+    <string name="txt_quer" tools:ignore="MissingTranslation"> اكتب الاستعلام الخاص بك الى </string>
+    <string name="txt_here" tools:ignore="MissingTranslation">هنا </string>
+    <string name="whatsapperror" tools:ignore="MissingTranslation">تطبيق الواتس أب ليس على هاتفك</string>
+    <string name="txt_address" tools:ignore="MissingTranslation">العنوان:</string>
+    <string name="fbtt1" tools:ignore="MissingTranslation"> متخصص في : </string>
+    <string name="fbt2" tools:ignore="MissingTranslation">, يمكنك الاتصال به على : </string>
+    <string name="fbt3" tools:ignore="MissingTranslation">, أو زيارته في : </string>
+    <string name="enteremailid" tools:ignore="MissingTranslation">يرجى إدخال رقم البريد الإلكتروني</string>
+    <string name="submit_txt" tools:ignore="MissingTranslation">تاكيد</string>
+    <string name="cancel_txt" tools:ignore="MissingTranslation">الغاء</string>
+    <string name="review_here_txt" tools:ignore="MissingTranslation">ضع رأيك في الطبيب هنا</string>
+    <string name="share_txt" tools:ignore="MissingTranslation">مشاركة</string>
+    <string name="select_date_txt" tools:ignore="MissingTranslation">اختار تاريخ</string>
+    <string name="about_us_txt" tools:ignore="MissingTranslation">من نحن</string>
+    <string name="name_company_txt" tools:ignore="MissingTranslation">We Care شركة</string>
+    <string name="contact_us_txt" tools:ignore="MissingTranslation">اتصل بنا</string>
+    <string name="distance_onoff" tools:ignore="MissingTranslation">البحث بالمسافة</string>
+    <string name="distance_txt" tools:ignore="MissingTranslation">المسافه</string>
+
+    <string name="nearby" translatable="false">قريب من (الموقع)</string>
+    <string name="city" translatable="false">المدينه</string>
+    <string name="alphabetic" translatable="false">أبجدي</string>
+
+
+
+
+    <string name="doctor_symbol" translatable="false">D</string>
+    <string name="pharmacy_symbol" translatable="false">P</string>
+    <string name="hospital_symbol" translatable="false">H</string>
+    <string name="rating" tools:ignore="MissingTranslation">التقييمات</string>
+    <string name="distance_miles" translatable="false">mi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">مرحبًا بجزء فارغ</string>
+    <string name="setting" tools:ignore="MissingTranslation">الاعدادات</string>
+    <string name="radius" tools:ignore="MissingTranslation">المعدل</string>
+    <string name="orderby" tools:ignore="MissingTranslation">ترتيب حسب</string>
+    <string name="currentlocation" tools:ignore="MissingTranslation">الموقع الحالي</string>
+    <string name="orderby_accending" tools:ignore="MissingTranslation">ترتيب تصاعدي</string>
+    <string name="orderby_decending" tools:ignore="MissingTranslation">ترتيب تنازلي</string>
+    <string name="Km" tools:ignore="MissingTranslation">كم</string>
 </resources>

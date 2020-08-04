@@ -10,7 +10,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/skip_txt"
+        android:text="تخطي"
         android:id="@+id/btn_skip"
         android:padding="10dp"
         android:textColor="@android:color/white"
@@ -72,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slidetitle1"
+            android:text="ايجاد أفضل الأطباء"
             android:id="@+id/txt_tittle1"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway"
             android:gravity="center"
-            android:text="@string/slidetitle2"
+            android:text="الآن العثور على أفضل الأطباء أمر سهل للغاية ، يمكنك البحث عن طبيب قريب أو الفرز حسب التصنيف أو الخدمة أو التخصص."
             android:textColor="@android:color/white"
             android:textSize="15sp"
             android:layout_marginBottom="15dp"/>
@@ -101,7 +101,7 @@
             android:layout_above="@+id/btn_continue"
             android:fontFamily="@font/raleway"
             android:gravity="center"
-            android:text="@string/slidetitle3"
+            android:text="يمكنك أيضًا حجز موعد أو الاتصال بالأطباء مباشرة."
             android:textColor="@android:color/white"
             android:textSize="15sp"
             android:layout_marginBottom="35dp"/>

@@ -126,7 +126,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/img_company"
-                android:src="@drawable/company"
+                android:src="@drawable/marker"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:adjustViewBounds="true"
@@ -145,7 +145,7 @@
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/raleway"
-                android:textColor="@android:color/black"
+                android:textColor="@color/textcolor_1"
                 tools:ignore="SpUsage"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/img_company" />
@@ -153,7 +153,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/img_email"
-                android:src="@drawable/mail"
+                android:src="@drawable/newmail"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
 
@@ -173,7 +173,7 @@
                 android:textStyle="bold"
                 android:id="@+id/txt_email"
                 android:fontFamily="@font/raleway"
-                android:textColor="@android:color/black"
+                android:textColor="@color/textcolor_1"
                 android:layout_toEndOf="@+id/img_company"
                 android:layout_marginStart="5dp"
                 tools:ignore="SpUsage" />
@@ -181,7 +181,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/img_website"
-                android:src="@drawable/web"
+                android:src="@drawable/www"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:adjustViewBounds="true"
@@ -200,7 +200,7 @@
                 android:textStyle="bold"
                 android:id="@+id/txt_website"
                 android:fontFamily="@font/raleway"
-                android:textColor="@android:color/black"
+                android:textColor="@color/textcolor_1"
                 android:layout_toEndOf="@+id/img_website"
                 android:layout_marginStart="5dp"
                 tools:ignore="SpUsage" />

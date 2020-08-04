@@ -112,9 +112,10 @@
                     android:id="@+id/btn_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/date"
+                    android:background="@drawable/calendar"
                     android:textColorHint="#000000"
-                    android:hint="@string/select_time_txt"                    android:maxLines="1"
+                    android:hint="@string/select_time_txt"
+                    android:maxLines="1"
                     android:fontFamily="@font/raleway"
                     android:paddingLeft="20dp"
                     android:textColor="#000000"
@@ -134,15 +135,12 @@
                     android:id="@+id/btn_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/time"
+                    android:background="@drawable/clock"
                     android:textColor="#000000"
                     android:textColorHint="#000000"
                      android:hint="@string/select_time_txt"
                     android:fontFamily="@font/raleway"
-                    android:paddingLeft="20dp"
-                    android:paddingStart="20dp"
-                    android:paddingRight="5dp"
-                    android:paddingEnd="5dp"
+                    android:padding="20dp"
                   />
 
             </RelativeLayout>
@@ -158,15 +156,15 @@
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/mobile_number"
+                android:background="@drawable/call"
                 >
                 <EditText
+                    android:textColor="#000"
                     android:id="@+id/et_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/mobile_number_txt"
                     android:maxLines="1"
-
                     android:textColorHint="#000000"
                     android:background="@null"
                     android:fontFamily="@font/raleway"
@@ -183,11 +181,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/relativeLayout6">
                 <EditText
+                    android:textColor="#000"
                     android:id="@+id/et_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="3"
-
+                    android:inputType="text"
                     android:layout_marginTop="10dp"
                     android:hint="@string/description_hint_txt"
                     android:background="@null"
@@ -264,6 +263,7 @@
 
             </LinearLayout>
             <RelativeLayout
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_below="@+id/ll_notes">
@@ -271,7 +271,7 @@
                     android:id="@+id/btn_bookapointment"
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
-                    android:background="@drawable/book_appontment_btn"
+                    android:background="@drawable/round_btn"
                     android:text="@string/book_appointment"
                     android:maxLines="1"
                     android:textColor="#FFFFFF"
@@ -281,7 +281,9 @@
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
                     android:layout_centerVertical="true"
-                    tools:ignore="SpUsage" />
+                    tools:ignore="SpUsage"
+                    android:padding="10dp"
+                    />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

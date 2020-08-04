@@ -9,8 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
@@ -51,125 +50,132 @@
                 android:textSize="20dp" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rel_doctor"
-            android:layout_width="fill_parent"
-            android:layout_height="97dp"
-            android:layout_above="@+id/rel_pharmacy"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/btn_homedoctor">
-            <ImageView
+
+
+            <RelativeLayout
+                android:id="@+id/rel_doctor"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_homedoctor"/>
-            <TextView
-                android:id="@+id/txt_doctorname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="5dp"
-                android:gravity="start"
-                android:text="@string/doctor"
-                android:textColor="#FFF"
-                android:textSize="25dp" />
+                android:layout_height="97dp"
+                android:layout_above="@+id/rel_pharmacy"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_homedoctor">
 
-            <TextView
-                android:id="@+id/txt_doctordesc"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_doctorname"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="70dp"
-                android:maxLines="3"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="70dp"
-                android:gravity="start"
-                android:text="@string/txt_doctor"
-                android:textColor="#FFF"
-                android:textSize="12dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_homedoctor" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_doctorname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="@string/doctor"
+                    android:textColor="#FFF"
+                    android:textSize="25dp" />
 
-        <RelativeLayout
-            android:id="@+id/rel_pharmacy"
-            android:layout_width="fill_parent"
-            android:layout_height="97dp"
-            android:layout_above="@+id/rel_hospital"
-            android:layout_marginBottom="5dp"
-           >
-            <ImageView
+                <TextView
+                    android:id="@+id/txt_doctordesc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_doctorname"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:text="@string/txt_doctor"
+                    android:textColor="#FFF"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_pharmacy"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_homepharmacies"/>
+                android:layout_height="97dp"
+                android:layout_above="@+id/rel_hospital"
+                android:layout_marginBottom="5dp">
 
-            <TextView
-                android:id="@+id/txt_pharmacyname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="5dp"
-                android:gravity="start"
-                android:text="@string/pharmany"
-                android:textColor="#FFF"
-                android:textSize="25dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_homepharmacies" />
 
-            <TextView
-                android:id="@+id/txt_pharmacydesc"
+                <TextView
+                    android:id="@+id/txt_pharmacyname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="@string/pharmany"
+                    android:textColor="#FFF"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/txt_pharmacydesc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_pharmacyname"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:text="@string/txt_pharmacies"
+                    android:textColor="#FFF"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_hospital"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_pharmacyname"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="70dp"
-                android:maxLines="3"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="70dp"
-                android:gravity="start"
-                android:text="@string/txt_pharmacies"
-                android:textColor="#FFF"
-                android:textSize="12dp" />
+                android:layout_height="97dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_homehospital">
 
-        </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_homehospital" />
 
-        <RelativeLayout
-            android:id="@+id/rel_hospital"
-            android:layout_width="fill_parent"
-            android:layout_height="97dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/btn_homehospital">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/btn_homehospital"/>
-            <TextView
-                android:id="@+id/txt_hospitalname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="5dp"
-                android:gravity="start"
-                android:text="@string/hospital"
-                android:textColor="#FFF"
-                android:textSize="25dp" />
+                <TextView
+                    android:id="@+id/txt_hospitalname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="@string/hospital"
+                    android:textColor="#FFF"
+                    android:textSize="25dp" />
 
-            <TextView
-                android:id="@+id/txt_hospitaldesc"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_hospitalname"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="10dp"
-                android:maxLines="3"
-                android:layout_marginStart="70dp"
-                android:gravity="start"
-                android:text="@string/txt_hospitals"
-                android:textColor="#FFF"
-                android:textSize="12dp" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_hospitaldesc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_hospitalname"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:text="@string/txt_hospitals"
+                    android:textColor="#FFF"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
     </RelativeLayout>
 
     <LinearLayout
@@ -196,27 +202,26 @@
                 android:id="@+id/txt_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/img_profile"
-                android:maxLines="1"
                 android:layout_toRightOf="@+id/img_profile"
                 android:gravity="center"
+                android:maxLines="1"
                 android:text="@string/profile_txt"
                 android:textColor="#FFFFFF"
                 android:textSize="18dp" />
 
             <TextView
+                android:inputType="text"
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_profile"
-                android:maxLines="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/img_profile"
-                android:layout_toRightOf="@+id/img_profile"
                 android:text="@string/sign_in_txt"
                 android:textColor="#FFFFFF"
                 android:textSize="18dp" />
@@ -384,9 +389,9 @@
                 android:id="@+id/logout"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:maxLines="1"
                 android:layout_gravity="center|bottom"
-                android:background="@drawable/log_out_btn" />
+                android:background="@drawable/log_out_btn"
+                android:maxLines="1" />
         </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

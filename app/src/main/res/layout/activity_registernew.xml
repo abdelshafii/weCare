@@ -35,14 +35,14 @@
                 android:layout_height="95dp"
 
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/profile_reg" />
+                android:background="@drawable/profile" />
 
             <Button
                 android:id="@+id/close"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/close_icon"
+                android:background="@drawable/ic_baseline_close_24"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
@@ -82,6 +82,7 @@
     </RelativeLayout>
 
     <EditText
+        android:inputType="text"
         android:id="@+id/username"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
@@ -96,6 +97,7 @@
         tools:ignore="RtlSymmetry" />
 
     <EditText
+        android:inputType="textEmailAddress"
         android:id="@+id/mail"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
@@ -125,14 +127,14 @@
         tools:ignore="RtlSymmetry" />
 
     <Button
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/register"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/sign_in"
+        android:background="@drawable/round_btn"
         android:text="@string/register_txt"
         android:textAllCaps="false"
         android:textColor="#fff"

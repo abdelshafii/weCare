@@ -547,17 +547,20 @@
                         android:layout_height="match_parent">
 
                         <View
+                            android:id="@+id/v1"
                             android:layout_width="2dp"
                             android:layout_height="10dp"
                             android:background="#2DA5DB" />
 
                         <ImageView
+                            android:id="@+id/v2"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
                             android:src="@drawable/scroll_bar_btn"
                             android:contentDescription="@string/todo" />
 
                         <View
+                            android:id="@+id/v3"
                             android:layout_width="2dp"
                             android:layout_height="fill_parent"
                             android:background="#2DA5DB" />
@@ -571,6 +574,7 @@
                         android:layout_marginStart="5dp">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/health_care_txt_header"
@@ -592,10 +596,10 @@
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/pc"
                     android:layout_width="150dp"
                     android:layout_height="2dp"
                     android:background="#2DA5DB"
-                    android:layout_marginLeft="9dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="9dp" />
             </RelativeLayout>
@@ -673,7 +677,7 @@
         android:id="@+id/rl_bottombar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorheader"
+        android:background="@color/fragmentbackground"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
@@ -684,21 +688,20 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
-           >
+            android:layout_centerHorizontal="true">
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:id="@+id/btn_call"
-                android:background="@drawable/detail_teliphone"/>
+                android:background="@drawable/call_red"/>
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:id="@+id/btn_mail"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/detail_mail"
+                android:background="@drawable/email"
                 android:layout_marginStart="10dp" />
 
             <Button
@@ -706,7 +709,7 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_bottom_map"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/detail_map"
+                android:background="@drawable/marker"
                 android:layout_marginStart="10dp" />
 
             <Button
@@ -714,7 +717,7 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_review"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/detail_review"
+                android:background="@drawable/review"
                 android:layout_marginStart="10dp"
                 />
 
@@ -723,7 +726,7 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_recipe"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/send_mail_icon"
+                android:background="@drawable/order_medcine"
                 android:layout_marginStart="10dp" />
 
         </LinearLayout>

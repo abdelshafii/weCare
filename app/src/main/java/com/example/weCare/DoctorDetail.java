@@ -7,6 +7,9 @@ import android.content.ActivityNotFoundException;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,8 +23,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -65,7 +70,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -112,7 +120,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
     private JSONObject Obj_detail;
     private String inquiry;
     private Button btn_recipe;
-    private Button btn_bookappointment ;
+    private Button btn_bookappointment;
 
 
     private static double roundMyData(double Rval, int numberOfDigitsAfterDecimal) {
@@ -128,7 +136,10 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctordetail);
         SharedPreferences prefs = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
-
+//        progressDialog.setMessage("Populating Headlines.....");
+//        progressDialog.show();
+//        populateTable();
+        printkeyhash();
         // check user is created or not
         // if user is already logged in
         if (prefs.getString("userid", null) != null) {
@@ -158,6 +169,18 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                 txt_letter.setText(getString(R.string.pharmacy_symbol));
                 inquiry = getString(R.string.pharmacy_mail_subject);
                 btn_recipe.setVisibility(View.VISIBLE);
+                TextView cc=findViewById(R.id.txt_healthcaretitle);
+                cc.setVisibility(View.GONE);
+                TextView vv=findViewById(R.id.txt_healthcare);
+                vv.setVisibility(View.GONE);
+                View view=findViewById(R.id.pc);
+                View view1=findViewById(R.id.v1);
+                View view2=findViewById(R.id.v2);
+                View view3=findViewById(R.id.v3);
+                view.setVisibility(View.GONE);
+                view1.setVisibility(View.GONE);
+                view2.setVisibility(View.GONE);
+                view3.setVisibility(View.GONE);
                 btn_bookappointment.setVisibility(View.GONE);
 
                 break;
@@ -166,6 +189,18 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                 txt_letter.setText(getString(R.string.hospital_symbol));
                 inquiry = getString(R.string.hospital_mail_subject);
                 btn_recipe.setVisibility(View.GONE);
+                TextView cc2=findViewById(R.id.txt_healthcaretitle);
+                cc2.setVisibility(View.GONE);
+                TextView vv2=findViewById(R.id.txt_healthcare);
+                vv2.setVisibility(View.GONE);
+                View viewH=findViewById(R.id.pc);
+                View view12=findViewById(R.id.v1);
+                View view22=findViewById(R.id.v2);
+                View view32=findViewById(R.id.v3);
+                viewH.setVisibility(View.GONE);
+                view12.setVisibility(View.GONE);
+                view22.setVisibility(View.GONE);
+                view32.setVisibility(View.GONE);
                 btn_bookappointment.setVisibility(View.GONE);
 
                 break;
@@ -174,6 +209,42 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
 
         new GetDataAsyncTask().execute();
         setLayout();
+    }
+
+//    private void populateTable() {
+//        runOnUiThread(new Runnable(){
+//            public void run() {
+//                //If there are stories, add them to the table
+//                for (Parcelable currentHeadline : allHeadlines) {
+//                    addHeadlineToTable(currentHeadline);
+//                }
+//                try {
+//                    progressDialog.dismiss();
+//                } catch (final Exception ex) {
+//                    Log.i("---","Exception in thread");
+//                }
+//            }
+//        });
+//    }
+
+    private void printkeyhash() {
+
+        try {
+
+            PackageInfo info = getPackageManager().getPackageInfo("com.example.weCare",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("keyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void setLayout() {
@@ -197,7 +268,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
         txt_aboutus = findViewById(R.id.txt_aboutus);
 
         // Set Font
-         Typeface TF_ralewayMidium = Typeface.createFromAsset(DoctorDetail.this.getAssets(), "fonts/Raleway-Medium_2.ttf");
+        Typeface TF_ralewayMidium = Typeface.createFromAsset(DoctorDetail.this.getAssets(), "fonts/Raleway-Medium_2.ttf");
 
         txt_settingtitle.setTypeface(TF_ralewayRegular);
         txt_name.setTypeface(TF_ralewayRegular);
@@ -222,13 +293,13 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
 
                 if (uservalue.equals("delete")) {
-                    errorbookDialog(DoctorDetail.this,1);
+                    errorbookDialog(DoctorDetail.this, 1);
                 } else {
                     try {
                         Intent iv = new Intent(DoctorDetail.this, BookApoinment.class);
                         iv.putExtra("userid", "" + uservalue);
                         iv.putExtra("doctor_id", "" + Obj_detail.getString("id"));
-                        iv.putExtra("doctor_email",""+Obj_detail.getString("email"));
+                        iv.putExtra("doctor_email", "" + Obj_detail.getString("email"));
                         startActivity(iv);
                     } catch (JSONException e) {
                         Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
@@ -244,10 +315,10 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
                 String urlToShare = null;
-                try {
-                    urlToShare = Obj_detail.getString("email1") + getString(R.string.fbtt1)+Obj_detail.getString("services")+getString(R.string.fbt2)+Obj_detail.getString("phone")+getString(R.string.fbt3)+Obj_detail.getString("address");
+                try {//Obj_detail.getString("email")+"\n"+
+                    urlToShare = Obj_detail.getString("email") + "\n" + getString(R.string.fbtt1) + Obj_detail.getString("services") + "\n" + getString(R.string.fbt2) + Obj_detail.getString("phone") + "\n" + getString(R.string.fbt3) + Obj_detail.getString("address");
                     urlToSharefb = "Name: " + Obj_detail.getString("name") + "\n " + "\n\n" + Obj_detail.getString("facebook");
-                   ShareDialog shareDialog = new ShareDialog(DoctorDetail.this);
+                    ShareDialog shareDialog = new ShareDialog(DoctorDetail.this);
                     if (ShareDialog.canShow(ShareLinkContent.class)) {
                         ShareLinkContent linkContent = new ShareLinkContent.Builder()
                                 .setContentUrl(Uri.parse(Obj_detail.getString("facebook")))
@@ -256,12 +327,12 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                         shareDialog.show(linkContent);
                     }
 
-                } catch (JSONException e) {
-                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
-
                 }
-                catch (Exception e)
-                {
+//                catch (JSONException e) {
+//                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+//
+//                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -273,22 +344,22 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
 
                 try {
-                    urlToSharetwitter = getString(R.string.email1) + Obj_detail.getString("name") + "\n "+ Obj_detail.getString("twiter");
-                    Uri bmpUri = getLocalBitmapUri(img_profile);
-                    Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_SEND);
+                    urlToSharetwitter = getString(R.string.email1) + Obj_detail.getString("name") + "\n " + Obj_detail.getString("twiter");
+//                    Uri bmpUri = getLocalBitmapUri(img_profile);
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+//                    intent.setAction(Intent.ACTION_SEND);
                     intent.putExtra(Intent.EXTRA_TEXT, urlToSharetwitter);
-                    intent.putExtra(Intent.EXTRA_STREAM, bmpUri);
+//                    intent.putExtra(Intent.EXTRA_STREAM, bmpUri);
                     intent.setType("text/plain");
-                    intent.setType("image/*");
+//                    intent.setType("image/*");
                     intent.setPackage("com.twitter.android");
-                    startActivity(intent);
-
+//                    startActivity(intent);
+                    startActivity(Intent.createChooser(intent, "Share this via"));
                 } catch (ActivityNotFoundException e) {
                     try {
                         urlToSharetwitter = getString(R.string.email1) + Obj_detail.getString("name") + "\n " + "\n\n" + Obj_detail.getString("twiter");
                         originalMessageEscaped = String.format(
-                                "https://twitter.com/intent/tweet?source=webclient&text=%s",
+                                "http://twitter.com/intent/tweet",
                                 URLEncoder.encode(String.valueOf(Html.fromHtml(urlToSharetwitter)), "UTF-8"));
                     } catch (UnsupportedEncodingException e1) {
                         e.printStackTrace();
@@ -316,13 +387,14 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
 
                 //startActivity(whatsappIntent);
                 try {
-                    String urlToShare = getString(R.string.email1) + Obj_detail.getString("name") + "\n"+ getString(R.string.email2)+Obj_detail.getString("phone")+"\n"+getString(R.string.txt_address)+Obj_detail.getString("address");
+                    String urlToShare = getString(R.string.email1) + Obj_detail.getString("name") + "\n" + getString(R.string.email2) + Obj_detail.getString("phone") + "\n" + getString(R.string.txt_address) + Obj_detail.getString("address");
                     Uri bmpUri = getLocalBitmapUri(img_profile);
                     Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
+                    whatsappIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
+                    whatsappIntent.setType("text/plain");
                     whatsappIntent.putExtra(Intent.EXTRA_TEXT, urlToShare);
                     whatsappIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
-                    whatsappIntent.setType("text/plain");
-                    whatsappIntent.setType("image/*");
+                    whatsappIntent.setType("*/*");
                     whatsappIntent.setPackage("com.whatsapp");
                     startActivity(whatsappIntent);
                 } catch (ActivityNotFoundException ex) {
@@ -347,7 +419,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                     i.setData(Uri.parse(uri));
                     startActivity(i);
                 } catch (JSONException e) {
-                    Toast.makeText(DoctorDetail.this,  getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -359,11 +431,11 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
 
                 try {
-                    Intent intent=new Intent(Intent.ACTION_SEND);
-                    String[] recipients={email};
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+                    String[] recipients = {email};
                     intent.putExtra(Intent.EXTRA_EMAIL, recipients);
                     intent.putExtra(Intent.EXTRA_SUBJECT, inquiry);
-                    intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.txt_quer)+Obj_detail.getString("name") + getString(R.string.txt_here)+"\n");
+                    intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.txt_quer) + Obj_detail.getString("name") + getString(R.string.txt_here) + "\n");
                     intent.setType("text/html");
                     startActivity(Intent.createChooser(intent, "Send mail"));
 
@@ -384,7 +456,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                     intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
                     startActivity(intent);
                 } catch (JSONException e) {
-                    Toast.makeText(DoctorDetail.this,  getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -398,7 +470,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                     iv.putExtra("profile_id", "" + Obj_detail.getString("id"));
                     startActivity(iv);
                 } catch (JSONException e) {
-                    Toast.makeText(DoctorDetail.this,  getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -409,11 +481,12 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 if (uservalue.equals("delete")) {
-                    errorbookDialog(DoctorDetail.this,2);
-                }else {
-                  Intent i = new Intent(DoctorDetail.this,SendRecipe.class);
-                  i.putExtra("doctoremail",email);
-                          startActivity(i);}
+                    errorbookDialog(DoctorDetail.this, 2);
+                } else {
+                    Intent i = new Intent(DoctorDetail.this, SendRecipe.class);
+                    i.putExtra("doctoremail", email);
+                    startActivity(i);
+                }
 
             }
         });
@@ -452,7 +525,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
 
                     myDbHelpel.close();
                 } catch (JSONException e) {
-                    Toast.makeText(DoctorDetail.this,  getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -521,7 +594,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                     myDbHelper.close();
 
                 } catch (Exception e) {
-                    Toast.makeText(DoctorDetail.this,  getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -592,7 +665,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
             txt_desc.setText(Obj_detail.getString("address"));
 
             double Distance = roundMyData(Double.parseDouble(Obj_detail.getString("distance")), 1);
-            txt_distance.setText("" + Distance + " "+getString(R.string.distance_miles));
+            txt_distance.setText("" + Distance + " " + getString(R.string.distance_miles));
 
             double ratting = roundMyData(Double.parseDouble(Obj_detail.getString("ratting")), 1);
             txt_ratenumber.setText("" + ratting);
@@ -630,7 +703,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
         } catch (JSONException e) {
             Log.e("Error", e.getMessage());
             Toast.makeText(DoctorDetail.this, getString(R.string.later_txt), Toast.LENGTH_SHORT).show();
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         afterMapReady(latitude, longitude);
@@ -660,11 +733,12 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
         }
         return bmpUri;
     }
+
     private Uri getLocalBitmapUUri(RelativeLayout imageView) {
         // Extract Bitmap from ImageView drawable
         imageView.setDrawingCacheEnabled(true);
         imageView.buildDrawingCache();
-        Bitmap bmp=Bitmap.createBitmap(imageView.getDrawingCache());
+        Bitmap bmp = Bitmap.createBitmap(imageView.getDrawingCache());
         imageView.setDrawingCacheEnabled(false);
         // Store image to default external storage directory
         Uri bmpUri = null;
@@ -738,7 +812,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void errorbookDialog(final Activity activity,int i) {
+    private void errorbookDialog(final Activity activity, int i) {
 
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -749,8 +823,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
         TextView errormsg = dialog.findViewById(R.id.txt_error_description);
         TextView txt_dialog_title = dialog.findViewById(R.id.txt_dialog_title);
 
-        if(i==2)
-        {
+        if (i == 2) {
             errormsg.setText(R.string.orderalert);
         }
 
@@ -800,7 +873,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                 hp = new URL(getString(R.string.link) + "getprofilefulldetail.php?profile_id=" + specialities_id + "&lat=" + latitudecur + "&lon=" + longitudecur);
 
                 // URL Connection
-                Log.e("check1",hp.toString());
+                Log.e("check1", hp.toString());
                 URLConnection hpCon = hp.openConnection();
                 hpCon.connect();
                 InputStream input = hpCon.getInputStream();
@@ -812,7 +885,7 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
                     total.append(x);
                     x = r.readLine();
                 }
-                Log.e("check1",total.toString());
+                Log.e("check1", total.toString());
 
                 // Json Parsing
                 JSONArray jObject = new JSONArray(total.toString());
@@ -937,13 +1010,14 @@ public class DoctorDetail extends FragmentActivity implements OnMapReadyCallback
     public void onBackPressed() {
         Intent i;
         i = getIntent();
-        if(i!=null){
-        if(i.getStringExtra("fromclass")==("fav"))
-        {Intent intent = new Intent(DoctorDetail.this,Favorite.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);}
-        else
-        super.onBackPressed();}
+        if (i != null) {
+            if (i.getStringExtra("fromclass") == ("fav")) {
+                Intent intent = new Intent(DoctorDetail.this, Favorite.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            } else
+                super.onBackPressed();
+        }
 
     }
 }

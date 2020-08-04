@@ -105,7 +105,11 @@ public class DBAdapter extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-
+		try {
+			db.execSQL("create table favorite (uniqueid TEXT PRIMARY KEY, doctorid TEXT , name TEXT, service TEXT, distance TEXT ) ");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

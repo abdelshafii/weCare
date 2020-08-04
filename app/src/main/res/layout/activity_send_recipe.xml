@@ -45,7 +45,7 @@
           <RelativeLayout
               android:layout_width="match_parent"
               android:id="@+id/ll_gallery"
-              android:background="#0089CF"
+              android:background="#C4E0F9"
               android:layout_margin="5dp"
                android:layout_height="wrap_content">
               <ImageView
@@ -249,6 +249,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_below="@+id/rl_mobilenumber">
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/et_description"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -292,15 +293,16 @@
                     android:fontFamily="@font/raleway"
                     android:textSize="12dp"
                     tools:ignore="SpUsage" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="@string/recipenotes2"
-                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/raleway"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:fontFamily="@font/raleway"
+                    android:text="@string/recipenotes2"
+                    android:textColor="@android:color/black"
                     android:textSize="12dp"
                     tools:ignore="SpUsage" />
                 <TextView
@@ -322,14 +324,17 @@
     </ScrollView>
 
     <Button
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/close"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:text="@string/order_medicine_txt"
         android:textAllCaps="false"
         android:fontFamily="@font/raleway"
-        android:background="#0089CF"
+        android:background="@drawable/round_btn"
         android:textColor="#ffffff"
         android:textSize="20sp" />
 </RelativeLayout>

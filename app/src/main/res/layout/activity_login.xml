@@ -28,13 +28,13 @@
 
     <ImageView
         android:id="@+id/or"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
         android:layout_above="@+id/facebook"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:background="@drawable/or_btn"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
 
     <LinearLayout
         android:id="@+id/lltext"
@@ -71,14 +71,13 @@
     </LinearLayout>
 
     <Button
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/signin"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_above="@+id/lltext"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/sign_in"
+        android:background="@drawable/round_btn"
         android:text="@string/sign_in_txt"
         android:textAllCaps="false"
         android:textColor="#fff"
@@ -87,6 +86,7 @@
 
 
     <EditText
+        android:inputType="text"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:id="@+id/mail"
